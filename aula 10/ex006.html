@@ -6,28 +6,29 @@
     <title>Document</title>
     <style>
         div#area {
-            font: nonral 20pt arial;
+            font: normal 20pt arial;
             background: rgb(74, 107, 74);
             color: white;
-            width: 200px;
-            height: 200px;
+            width: 300px;
+            height: 300px;
+            border-radius: 15px;
             line-height: 200px;
             text-align: center;
         }
     </style>
 </head>
 <body>
-    <div id="area">
+    <div id="area"> <!-- Uma forma de fazer essa mesma funcionalidade de disparo e interação com mouse, poderia ser feita aqui no HTML, seguindo atribuições logo após "area" onclick="clicar()" onmouseenter="entrar()" onmouseoute="sair()" -  Mas dessa forma, ficaria muito poluid o HTML. Por isso, usamos somente a div com seu id, e fazemos da maneira abaixo: -->
         Interaja...
     </div>
 
     <script>
-        var a = window.document.getElementById('area')
+        var a = window.document.getElementById('area') // colocando o VAR aqui para parte de cima do código, ele (Var a), mais especificamente, o "a", vai funcionar para todas as definições de function pra baixo. 
         a.addEventListener('click', clicar)
         a.addEventListener('mouseenter', entrar)
         a.addEventListener('mouseout', sair)
 
-      function clicar() {
+        function clicar() {
             a.innerText = 'clicou!'
             a.style.background = 'red'
         }
@@ -36,6 +37,7 @@
         }
          function sair() {
             a.innerText = 'Saiu!'
+            a.style.backgroundColor = 'green'
         }
     </script>
 </body>
