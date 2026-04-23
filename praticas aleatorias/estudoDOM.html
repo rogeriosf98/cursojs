@@ -88,7 +88,25 @@
             a1.innerText = 'Desencosta fazendo favor sô'
         }
         function sair() {
-            a1.innerText = 'Eu hein'
+            a.innerText = 'Eu hein'
+        }
+        
+        var a2 = window.document.getElementById('area02')
+
+        a2.addEventListener('click', clicarr)
+        a2.addEventListener('mouseenter', entrarr)
+        a2.addEventListener('mouseout', sairr)
+        
+        function clicarr () {
+            a2.innerText = 'AAaaiii Zé da manga"'
+        }
+
+        function entrarr () {
+            a2.innerText = 'Calma lá, meu patrão'
+        }   
+
+        function sairr () {
+            a2.innerHTML = 'Foi bom pra você?'
         }
 
     </script>
