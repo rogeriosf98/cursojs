@@ -1,6 +1,7 @@
 function carregar() {
     var msg = document.getElementById('msg') // guarda o elemento para poder manipular depois
     var img = document.getElementById('imagem')
+    
     var data = new Date()
     var hora = data.getHours()
     msg.innerHTML = `Agora são ${hora} horas.`
